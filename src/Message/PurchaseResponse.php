@@ -4,10 +4,11 @@ namespace Omnipay\IPay88\Message;
 
 
 use Omnipay\Common\Message\AbstractResponse;
+use Omnipay\Common\Message\RedirectResponseInterface;
 
-class PurchaseResponse extends AbstractResponse
+class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
-    protected $endpoint = 'https://www.mobile88.com/ePayment/entry.asp';
+    protected $endpoint = 'https://payment.ipay88.com.my/ePayment/entry.asp';
 
     public function getTransactionId()
     {

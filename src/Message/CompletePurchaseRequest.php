@@ -7,7 +7,7 @@ use Omnipay\Common\Currency;
 
 class CompletePurchaseRequest extends AbstractRequest
 {
-    protected $endpoint = 'https://www.mobile88.com/epayment/enquiry.asp';
+    protected $endpoint = 'https://payment.ipay88.com.my/ePayment/enquiry.asp';
 
     public function getData()
     {
@@ -48,6 +48,8 @@ class CompletePurchaseRequest extends AbstractRequest
 
         $paramsInArray = [$merchantKey, $merchantCode, $paymentId, $refNo, $amount, $currency, $status];
 
-        return $this->createSignatureFromString(implode('', $paramsInArray));
+        $stringToHash = implode('', $paramsInArray);
+
+        return  hash('sha256', $stringToHash);
     }
 }

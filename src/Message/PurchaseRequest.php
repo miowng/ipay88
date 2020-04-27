@@ -16,7 +16,7 @@ class PurchaseRequest extends AbstractRequest
             'Amount' => number_format($this->getAmount(), 2),
             'Currency' => $this->getCurrency(),
             'ProdDesc' => $this->getDescription(),
-            'UserName' => $this->getCard()->getBillingName(),
+            'UserName' => $this->getCard()->getBillingLastName(),
             'UserEmail' => $this->getCard()->getEmail(),
             'UserContact' => $this->getCard()->getNumber(),
             'Remark' => '',
@@ -44,7 +44,9 @@ class PurchaseRequest extends AbstractRequest
 
         $paramsInArray = [$merchantKey, $merchantCode, $refNo, $amount, $currency];
 
-        return $this->createSignatureFromString(implode('', $paramsInArray));
+        $stringToHash = implode('', $paramsInArray);
+
+        return  hash('sha256', $stringToHash);
     }
 
 }
