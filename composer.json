@@ -1,6 +1,6 @@
 {
-    "name": "dilab/omnipay-ipay88",
-    "description": "iPay88 gateway for Omnipay payment processing library",
+    "name": "miowng/ipay88",
+    "description": "iPay88 gateway for Omnipay payment processing library(source code take from dilab.Please tell me If copyright infringement)",
     "keywords": [
         "gateway",
         "merchant",
@@ -17,7 +17,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "omnipay/common": "3.0-beta.1",
+        "omnipay/common": "3.0.3",
         "php-http/guzzle6-adapter": "^1.1"
     },
     "require-dev": {
