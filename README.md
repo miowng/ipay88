@@ -11,21 +11,17 @@ processing library for PHP 5.3+. This package implements iPay88 support for Omni
 
 ## Installation
 
-Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply add it
-to your `composer.json` file:
+Omnipay is installed via [Composer](http://getcomposer.org/). 
 
-```json
-{
-    "require": {
-        "dilab/omnipay-ipay88": "~2.0"
-    }
-}
+Run on cmd
+```
+composer require miowng/ipay88 3.0.0
 ```
 
-And run composer to update your dependencies:
+## Reminder
+Don't forget to set your merchantKey, merchantCode and backendUrl on Gateway.php
 
-    $ curl -s http://getcomposer.org/installer | php
-    $ php composer.phar update
+file location is ipay88/src/Gateway.php
 
 ## Basic Usage
 
