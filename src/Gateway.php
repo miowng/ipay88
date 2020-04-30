@@ -20,9 +20,9 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return [
-            'merchantKey' => '',
-            'merchantCode' => '',
-            'backendUrl' => ''
+            'merchantKey' => env('IPAY88_MERCHANT_KEY', null),
+            'merchantCode' => env('IPAY88_MERCHANT_CODE', null),
+            'backendUrl' => env('IPAY88_BACKEND_URL', null),
         ];
     }
 
