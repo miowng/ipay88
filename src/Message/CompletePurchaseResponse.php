@@ -15,7 +15,7 @@ class CompletePurchaseResponse extends AbstractResponse
         'Incorrect amount' => 'Amount different',
         'Payment fail' => 'Payment fail',
         'M88Admin' => 'Payment status updated by iPay88 Admin(Fail)',
-        'reached maximum requery' => 'Limited by per day maximum number of requery'
+        'Limited by per day maximum number of requery' => 'reached maximum requery'
     ];
 
     private $invalidSignatureMsg = 'Invalid signature returned from iPay88';
