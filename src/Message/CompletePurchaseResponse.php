@@ -14,7 +14,8 @@ class CompletePurchaseResponse extends AbstractResponse
         'Record not found' => 'Cannot found the record',
         'Incorrect amount' => 'Amount different',
         'Payment fail' => 'Payment fail',
-        'M88Admin' => 'Payment status updated by iPay88 Admin(Fail)'
+        'M88Admin' => 'Payment status updated by iPay88 Admin(Fail)',
+        'reached maximum requery' => 'Limited by per day maximum number of requery'
     ];
 
     private $invalidSignatureMsg = 'Invalid signature returned from iPay88';
