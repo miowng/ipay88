@@ -15,7 +15,7 @@ Omnipay is installed via [Composer](http://getcomposer.org/).
 
 Run on cmd
 ```
-composer require miowng/ipay88 3.0.1
+composer require miowng/ipay88 3.1.1
 ```
 
 ## Reminder
